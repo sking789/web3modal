@@ -14,10 +14,18 @@ export async function apiGetAccountAssets(
   address: string,
   chainId: number
 ): Promise<IAssetData[]> {
-  const response = await api.get(
-    `/account-assets?address=${address}&chainId=${chainId}`
-  )
-  const { result } = response.data
+  // const response = await api.get(
+  //   `/account-assets?address=${address}&chainId=${chainId}`
+  // )
+  // const { result } = response.data
+  const result = [
+    {
+      symbol: '',
+      name: '',
+      decimals: '18',
+      contractAddress: ''
+    }
+  ]
   return result
 }
 
